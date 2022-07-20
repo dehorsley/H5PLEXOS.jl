@@ -5,9 +5,9 @@ function process(
     sample::String="Mean", xmlfile::String="")
 
     systemdata, resultvalues = if xmlfile == ""
-         open_plexoszip(zipfilein)
+         open_plexos(zipfilein)
     else
-         open_plexoszip(zipfilein, xmlfile)
+         open_plexos(zipfilein, xmlfile)
     end
 
     targetsample = findsample(systemdata, sample)
